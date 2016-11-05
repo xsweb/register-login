@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册登陆</title>
+</head>
+<body ng-app="userApp">
+<!--注册-->
+<table border=1 ng-controller='registerCtrl'>
+    <tr>
+        <td>
+            用户名：
+        </td>
+        <td>
+            <input type="text" ng-model="username">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            密码：
+        </td>
+        <td>
+            <input type="password" ng-model="password">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            再次输入密码：
+        </td>
+        <td>
+            <input type="password" ng-model="password2">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            是否同意：
+        </td>
+        <td>
+            <input type="checkbox" ng-model="agree">
+        </td>
+    </tr>
+    <tr ng-hide="!msg">
+        <td colspan='2'>{{msg}}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <input type="button" value="点击注册" ng-click="register()">
+        </td>
+    </tr>
+</table>
+<!--登录-->
+<hr>
+<table border="1" ng-controller="loginCtrl">
+    <tr>
+        <td>用户名:</td>
+        <td><input type="text" ng-model="username"></td>
+    </tr>
+    <tr>
+        <td>密码:</td>
+        <td><input type="password" ng-model="password"></td>
+    </tr>
+    <tr ng-hide="!msg">
+        <td colspan="2">{{msg}}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="button" value="点击登陆!" ng-click="login()"></td>
+    </tr>
+</table>
+<script src="node_modules/angular/angular.js"></script>
+<script src="js/controller.js"></script>
+<script>
+
+</script>
+</body>
+</html>
